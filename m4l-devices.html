@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<!--               head               -->
+<!--               head               -->
+<head>
+  <meta charset="utf-8">
+  <meta name="index" content="Portafolio de Sergio Granada Moreno para la convocatoria Paisaje Sonoro de Idartes 2017">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+  <title>Portafolio de Sergio Granada Moreno</title>
+  <link rel="stylesheet" href="style.css" type="text/css" />
+ 
+  <!-- IE Mobile 10.0 rendering bug fix -->
+    <script>(function(){if("-ms-user-select"in document.documentElement.style&&navigator.userAgent.match(/IEMobile\/10\.0/)){var a=document.createElement("style");a.appendChild(document.createTextNode("@-ms-viewport{width:auto!important}"));document.getElementsByTagName("head")[0].appendChild(a)}})();</script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="">
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="revisit-after" content="3 days" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Portafolio de Sergio Granada Moreno" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="" />
+    
+  </head>
+<!--               body               -->
+<body>
+
+      <header id="site-header" class="group">
+
+    <!-- Main Menu -->
+
+          <nav id="access" role="navigation">
+          <h3 class="assistive-text">Main menu</h3>
+          <div class="skip-link"><a class="assistive-text" href="#content">Skip to primary content</a></div>
+          <div class="menu-main-menu-container">
+          
+          <ul id="menu-main-menu" class="menu"><li id="menu-item-30" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30"><a href="index.html"> inicio </a></li>
+          <li id="menu-item-37" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37"><a href="digital-rainbow.html">acusmática</a></li>
+          <li id="menu-item-34" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-34"><a href="litany-for-the-whale.html">multimedia</a></li>
+          <li id="menu-item-31" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-10 current_page_item menu-item-31"><a href="the-sound-of-the-wind.html">instalación</a></li>
+          <li id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33"><a href="m4l-devices.html">sintetizadores</a></li>
+           <!--<li id="menu-item-44" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-44"><a href="web-audio.html">web audio</a></li>-->
+          <li id="menu-item-76" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-76"><a href="contact.html">contacto</a></li>
+          </ul></div></nav><!-- #access -->
+        
+        </div>
+        </header>
+		
+      <content> <!--               "in progress" image               -->
+      <br><br><br><br><p><img src="http://www.rmreps.com/assets/images/UnderConstruction.PNG" width="50%" height="50%"/></p>
+
+              <!--
+
+
+              <p><br><br><br><br>El sonido del viento (2015)<br>Instalación multimedia<br><br><br> </p>
+              
+              <div class="v-player"><iframe src="https://player.vimeo.com/video/128900070?color=ffffff" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+          
+              <p>This is an audiovisual composition about the sound of the wind, presented to the public in the form of an interactive installation. It uses live internet feeds to drive an audiovisual, non-repeatable experience, based on weather sonification and visualisation.<br><br>About how this works:<br><br> Weather data is accessed online via a native Processing library (onformative 2015) which allows to read live internet feeds directly from a weather online service; such data is routed internally within Processing for dynamic visualisation and sent via OSC protocol to a group of Max/MSP patches for data scaling and sonification. Data is fed back later from Max into Processing in order to reinforce a symbiotic generation of audiovisuals.<br><br>OSC data packages include information about a particular location determined by a WOEID value (i.e. a city around the world), including geographical latitude, longitude, weather condition, wind direction, wind speed, visible distance, temperature, local pressure and so on. Such packages are sent and received via Jamoma (2015) and oscP5 (2015) libraries in Max and Processing respectively. Interactivity is supported by a graphical user interface whereby the audience is able to select a city around the world to filter the data, wait, and hear how it sounds.<br><br>The sonic output of this is based on two different implementations; the first relates with Andy Farnell’s (2010, pp. 471-481) model for a DSP-based re-creation of the sound of the wind, i.e., a dynamic wind sound generator which follows a pattern that constantly changes according to a local wind speed factor, using noise, filters and surround spatialisation. The patch emulates several types of wind sound according to its causality, as for example, the sound caused by wind passing through resonant spaces like pipes and doorways, the sound caused by large irregular objects with a rough surface, the sound of whistling wires and so on.<br><br>The second implementation presents a six voice polyphonic synthesizer featuring wavetable synthesis and frequency modulation; such is used to sonify a mix of the data generated by the previous implementation and the data received directly form the internet feeds. The synthesis engine is based on the following: wavetable lookup synthesis (wavetable synthesis) (Floss 2012, Chapter 20; Puckette 2007, Chapter 2; Rolfe 2014), multiple carrier frequency modulation (FM) (Puckette 2007, Chapter 5; Truax 2014) and exponential envelope generators (McCulloch 2014). In addition to this, two further processes of DSP-based sound generation are performed: (1) vocoding of the sound of the wind and the synthesiser output via Tomczak (2015) 128 Band Vocoder M4L device; (2) reverberation via Christian Kleine’s Verbotron reverb (Bloom 2015).<br><br>Data visualisation is performed within Processing via arrays of particles (Poulson 2015); direction of the particles is directly fed from the weather service whilst size and color in the visualisation are driven by the data being fed from the sonification process. Additionally, a textual description of the internet feed is presented at the bottom of the installation main screen.<br><br> A production diary can be found <a href="https://docs.google.com/document/d/1W1gZwEDprbgVtNhZiOEFadKk8ROmbs-Z6Y1NrbxScSg/pub" target='blank'> here.</a></p><br><br><br><br><br>
+  
+              -->
+            
+
+
+              </content>  
+			
+</body>
+
+  <!--               content               -->
+
+  <!--               footer              
+
+  <footer>
+  <a href="#site-header">Back To Top</a><br><br>
+	</footer>-->
+
+
+</html>
