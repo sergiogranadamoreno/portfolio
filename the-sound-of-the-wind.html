@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<html lang="es">
+<title>Sergio Granada Moreno Portfolio</title>
+<link type="text/css" rel="stylesheet" href="css/blue.css" />
+<link type="text/css" rel="stylesheet" href="css/print.css" media="print"/>
+<!--[if IE 7]>
+<link href="css/ie7.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+<link href="css/ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.tipsy.js"></script>
+<script type="text/javascript" src="js/cufon.yui.js"></script>
+<script type="text/javascript" src="js/scrollTo.js"></script>
+<script type="text/javascript" src="js/myriad.js"></script>
+<script type="text/javascript" src="js/jquery.colorbox.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+<script type="text/javascript">
+    Cufon.replace('h1,h2');
+</script>
+</head>
+
+<body>
+<!-- Begin Wrapper -->
+<div id="wrapper">
+  <div class="wrapper-top"></div>
+  <div class="wrapper-mid">
+    <!-- Begin Paper -->
+    <div id="paper">
+      <div class="paper-top"></div>
+      <div id="paper-mid">
+        <div class="entry">
+          <!-- Begin Image -->
+          <img class="portrait" src="images/image.jpg" alt="image" />
+          <!-- End Image -->
+          <!-- Begin Personal Information -->
+          <div class="self">
+            <h1 class="name"><a href= "index.html">SERGIO GRANADA MORENO</a><br/>
+              <span>M&#250sica, diseño sonoro y multimedia</span></h1><br>
+            
+          </div>
+          <!-- End Personal Information -->
+          <!-- Begin Social -->
+          <div class="social">
+            <ul>
+              <!--<li><a class='north' href="https://www.dropbox.com/s/hy4l27ue8mvsyun/SGM%20Hoja%20de%20vida%202018%20%281%29.pdf?dl=0" title="Download CV" target="_blank"><img src="images/icn-save.jpg" alt="Download the pdf version" /></a></li>-->
+              <li><a class='north' href="javascript:window.print()" title="Print"><img src="images/icn-print.jpg" alt="" /></a></li>
+              <!--<li><a class='north' id="contact" href="contact/index.html" title="Contact Me"><img src="images/icn-contact.jpg" alt="" /></a></li>-->
+              <li><a class='north' href="https://www.linkedin.com/in/sergiogranadamoreno/" title="Linkedin Profile" target="_blank"><img src="images/black-linkedin-512.jpg" alt="" /></a></li> 
+              <!--<li><a class='north' href="#" title="My Facebook Profile"><img src="images/icn-facebook.jpg" alt="" /></a></li> -->
+            </ul>
+          </div>
+          <!-- End Social -->
+        </div>
+              <div class="entry">
+
+              <p><b>El sonido del viento (2015)</b><br>Instalación multimedia<br><br></p>
+              
+              <div class="v-player"><iframe src="https://player.vimeo.com/video/128900070?color=ffffff" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+          
+              <p><br><br>"El sonido del viento" es una instalación interactiva que utiliza fuentes web en tiempo real para generar una experiencia audiovisual, no repetible, basada en la sonificación y visualización de información metereológica.<br><br> El acceso a dicha información se realiza por medio de Processing, utilizando una librería nativa que permite leer las fuentes web (onformative 2015). Los datos recibidos son utilizados en Processing para su visualización y enviados vía OSC a Max/MSP para su sonificación; el resultado de la sonificación es enviado de vuelta a Processing (interviniendo en el proceso de visualización), para reforzar una generación simbiótica del material audiovisual. La comunicación OSC es implementada utilizando las librerías Jamoma (2015) y oscP5 (2015) en Max y Processing respectivamente.<br><br>La interactividad es habilitada por una interfaz gráfica mediante la cual el usuario selecciona una ciudad en el mundo; de acuerdo a su selección, los paquetes de datos OSC incluyen información acerca de la latitud, longitud, condición meteorológica, dirección y velocidad del viento, distancia visible, temperatura, presión local y así sucesivamente.<br><br>La salida sónica se basa en dos implementaciones diferentes. La primera se relaciona con el modelo del sonido del viento de <a href="http://aspress.co.uk/sd/" target="_blank">Andy Farnell (2010, pp. 471-481)</a>, el cual sigue un patrón que cambia de manera constante de acuerdo a un factor local de velocidad (extraído de la fuente web). El patch (en Max/MSP) emula varios tipos de sonido de viento según su causalidad, como por ejemplo, el sonido causado por el viento que pasa a través de espacios resonantes como tubos y puertas, el sonido causado por grandes objetos irregulares con una superficie rugosa, el sonido de los cables silbantes y así sucesivamente.<br><br>La segunda implementación presenta un sintetizador monofónico con seis osciladores y frecuencia modulada (FM); este funciona como motor sonoro en la sonificación de las señales de control generadas por la implementación anterior, así como en la sonificación directa de datos recibidos desde la fuente web (p. ej. temperatura, presión). El diseño del sintetizador incluye síntesis mediante tablas de onda (wavetable synthesis) (<a href="http://en.flossmanuals.net/pure-data/" target="blank">Floss 2012, Chapter 20</a>; <a href="http://msp.ucsd.edu/techniques.htm" target="blank">Puckette 2007, Chapter 2</a>; <a href="http://cycling74.com/forums/topic/sinesum-function-a-la-puredata/" target="blank">Rolfe 2014</a>), FM con múltiples portadoras (Puckette 2007, Chapter 5; <a href="http://www.sfu.ca/~truax/fmtut.html" target="blank">Truax 2014</a>) y generadores de envolvente "AD" (<a href="http://en.flossmanuals.net/pure-data/" target="blank">McCulloch 2014</a>). Adicionalmente, se emplearon los siguientes procesos de transformación tímbrica sobre la salida del sintetizador: (1) "cross-synthesis" utilizando  el dispositivo de <a href="http://little-scale.blogspot.co.uk/2013/11/128-band-vocoder-max-for-live-device.html" target="blank">Tomczak "128 Band Vocoder"</a>; (2) reverberación a través del dispositivo <a href="http://www.maxforlive.com/library/device/2000/verbotron" target="blank">"Verbotron" (Kleine)</a>.<br><br>La visualización de datos implementada por medio de Processing utiliza matrices de partículas (<a href="http://www.lynda.com/Processing-tutorials/Interactive-Data-Visualization-Processing/97578-2.html." target="blank">Poulson 2015</a>) que siguen un vector de movimiento correspondiente a la dirección del viento en la ciudad seleccionada. La dirección de las partículas en la visualización corresponde a los datos de la fuente web, mientras que el tamaño y color de las mismas corresponde a los parámetros que intervienen en el proceso de sonificación. Adicionalmente, una descripción textual de los datos provenientes de la fuente web se presenta en la parte inferior de la pantalla principal de la instalación.<br><br> Acceda al diario de producción a través del siguiente <a href="https://docs.google.com/document/d/1W1gZwEDprbgVtNhZiOEFadKk8ROmbs-Z6Y1NrbxScSg/pub" target='blank'> enlace.</a><br><br></p>
+  
+              <!--             more video players -->
+              
+             <div class="v-player">
+              <iframe src="https://player.vimeo.com/video/123317952?color=ffffff" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+              </div>
+
+              <p><br><br></p>
+
+             <div class="v-player">
+              <iframe src="https://player.vimeo.com/video/122956607?color=ffffff" width="640" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+              </div>
+
+              
+              <p><br><br><br><a href="multimedia.html">Back To Menu</a></p>
+              </div> 
+    
+			
+</body>
+
+ 
+
+</html>
